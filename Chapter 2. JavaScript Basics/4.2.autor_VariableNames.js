@@ -1,4 +1,4 @@
-// Choose better names for variables
+// Choose names for variables
 
 let ourPlanetName;
 let currentUserName;
