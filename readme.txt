@@ -4,7 +4,7 @@ Readme v. 0.1
 Project status: in progress…
 
 --- About ---
-This is an educational project aimed at studying JavaScript, Html and GitHub.
+This is an educational project started in January 2022 and aimed at studying JavaScript, Html and GitHub.
 The tasks were translated from Russian into English (for English learning too).
 
 The tasks are taken from learn.javascript.ru
