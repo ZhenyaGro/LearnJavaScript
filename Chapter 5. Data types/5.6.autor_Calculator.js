@@ -22,7 +22,7 @@ function Calculator() {
     let arrSplited = str.split(' '),
       a = +arrSplited[0],
       op = arrSplited[1],
-      b = +arrSplited[2]
+      b = +arrSplited[2];
 
     if (!this.methods[op] || isNaN(a) || isNaN(b)) {
       return NaN;
