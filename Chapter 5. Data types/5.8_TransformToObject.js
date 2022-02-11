@@ -28,7 +28,7 @@ function mapping(user) {
   };
 
   return newUser;
-};
+}
 
 /*
 usersMapped = [
