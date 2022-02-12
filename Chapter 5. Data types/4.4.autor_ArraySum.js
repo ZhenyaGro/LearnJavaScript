@@ -8,7 +8,6 @@ function sumInput() {
 
     let value = prompt("Input number", 0);
 
-    // Прекращаем ввод?
     if (value === "" || value === null || !isFinite(value)) break;
 
     numbers.push(+value);
