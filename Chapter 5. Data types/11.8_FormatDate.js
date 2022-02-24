@@ -16,23 +16,33 @@ function formatDate(date) {
 
   if (result < 1000 && result >= 0) {
     return 'right now';
-  } else if (result < 60 * 1000) {
-    return `${Math.round(result / 1000)} seconds ago`;
-  } else if (result < 60 * 60 * 1000) {
-    return `${Math.round(result / 60000)} minutes ago`;
-  } else {
-
-    let formatter = {
-      day: '2-digit',
-      month: '2-digit',
-      year: '2-digit',
-      hour: '2-digit',
-      minute: '2-digit',
-    };
-
-    // return `${DD}.${MM}.${YY} ${HH}:${mm}`;
-    return date.toLocalString("ru", format);
   }
+
+  if (result < 60 * 1000) {
+    return `${Math.round(result / 1000)} seconds ago`;
+  }
+
+  if (result < 60 * 60 * 1000) {
+    return `${Math.round(result / 60000)} minutes ago`;
+  }
+
+
+  let formatDate = function (number) {
+    return number < 10 ? `0${number}` : number;
+  };
+  let formatYear = function (number) {
+    return `${number}`.slice(2);
+  };
+
+  let DD = formatDate(date.getDate());
+  let MM = formatDate(date.getMonth() + 1);
+  let HH = formatDate(date.getHours());
+  let mm = formatDate(date.getMinutes());
+
+  let YY = formatYear(date.getFullYear());
+
+  return `${DD}.${MM}.${YY} ${HH}:${mm}`;
+
 }
 
 alert(formatDate(new Date(new Date - 1))); // "right now"
