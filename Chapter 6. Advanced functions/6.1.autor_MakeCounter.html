@@ -1,0 +1,45 @@
+<!doctype html>
+<script src="https://ru.js.cx/test/libs.js"></script>
+<script src="test.js"></script>
+<script>
+
+  /*
+  Write the makeCounter() code that the counter will be able to increase and set a value.
+  - counter() should return the next value.
+  - counter.set() should set the value "value" to the counter.
+  - counter.decrease() should decrement the counter value by 1.
+  */
+
+  'use strict';
+
+  // Closure
+  function makeCounter() {
+    let count = 0;
+
+    function counter() {
+      return count++;
+    }
+
+    counter.set = value => count = value;
+
+    counter.decrease = () => count--;
+
+    return counter;
+  }
+
+  let counter = makeCounter();
+
+  alert(counter()); // 0
+  alert(counter()); // 1
+
+  counter.set(10); // set a new value
+
+  alert(counter()); // 10
+
+  counter.decrease(); // decrease the value by 1
+
+  alert(counter()); // 10 (instead 11)
+
+</script>
+
+</html>
