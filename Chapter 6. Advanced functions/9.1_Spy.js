@@ -9,13 +9,15 @@ Each call must be stored as an array of arguments.
 'use strict';
 
 function spy(func) {
-  spy.calls = [];
 
-  return function () {
-    for (let curArg of arguments) {
-      spy.calls.push(curArg);
-    }
-  }
+  function wrapper(...args) {
+    wrapper.calls.push(args);
+    return func.apply(this, arguments);
+  };
+
+  wrapper.calls = [];
+
+  return wrapper;
 }
 
 function work(a, b) {
