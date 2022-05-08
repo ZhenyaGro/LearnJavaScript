@@ -20,4 +20,5 @@ function showCircle(cx, cy, radius, callback) {
     div.addEventListener('transitionend', () => callback(div), { once: true });
   }, 0);
 
+  // div.addEventListener('transitionend', () => callback(div));
 }
