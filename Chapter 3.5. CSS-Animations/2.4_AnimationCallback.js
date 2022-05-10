@@ -19,6 +19,4 @@ function showCircle(cx, cy, radius, callback) {
     div.style.height = radius * 2 + 'px';
     div.addEventListener('transitionend', () => callback(div), { once: true });
   }, 0);
-
-  // div.addEventListener('transitionend', () => callback(div));
 }
