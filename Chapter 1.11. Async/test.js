@@ -11,4 +11,4 @@ function loadScript(src, callback) {
   document.head.append(script);
 }
 
-loadScript('./Chapter 10. Catch errors/1.1.autor_Finally.js'/*callback: , function() {}*/);
+loadScript('./Chapter 1.10. Catch errors/1.1.autor_Finally.js'/*callback: , function() {}*/);
