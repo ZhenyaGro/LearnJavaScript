@@ -12,6 +12,7 @@ The tasks are taken from learn.javascript.ru
 
 --- Solutions ---
 The tasks from chapters 1 - 4 were comlited without a github repository and were not saved. Therefore, the solutions 1 - 4 are copied from the site.
+"index.html" is used for scripts testing.
 
 --- Thanks ---
 Thanks to autors for the materials.
