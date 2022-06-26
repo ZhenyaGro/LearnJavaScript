@@ -56,14 +56,11 @@
       <td>5:5</td>
     </tr>
   </table>
-  <script src="3.3_RedDiagonal.js">
+  <script>
     let table = document.body.firstElementChild;
-    for (let cell of table) {
-      cell.style.backgroundColor = 'red';
+    for (let i = 0; i < table.rows.length; i++) {
+      table.rows[i].cells[i].style.backgroundColor = 'red';
     }
-
-    //  в переменной td находится DOM-элемент для тега <td>
-    // td.style.backgroundColor = 'red';
   </script>
 </body>
 
